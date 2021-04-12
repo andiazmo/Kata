@@ -11,7 +11,8 @@ import json
 
 @csrf_exempt
 def index(request):
-    images_list = Image.objects.all()
+   # images_list = Image.objects.all()
+    images_list = []
     return HttpResponse(serializers.serialize("json", images_list))
 
 

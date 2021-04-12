@@ -24,6 +24,6 @@ class GalleryTestCase(TestCase):
             name='nuevo2', url='No', description='testImage', type='jpg', user=user_model)
 
         response = self.client.get('/gallery/')
-        current_data = json.loads(response.content1)
+        current_data = json.loads(response.content)
         print(current_data)
         self.assertEqual(len(current_data), 2)
